@@ -2,18 +2,18 @@ import { Document, Schema, model, models } from "mongoose";
 
 export interface IEvent extends Document {
   _id: string;
-  title: string; // Required
-  description?: string; // Optional
-  location?: string; // Optional
-  createdAt?: Date; // Default value: Date.now
-  imageUrl: string; // Required
-  startDateTime?: Date; // Default value: Date.now
-  endDateTime?: Date; // Default value: Date.now
-  price?: string; // Optional
-  isFree?: boolean; // Default value: false
-  url?: string; // Optional
-  category?: { _id: string; name: string }; // Optional, reference to Category
-  organizer?: { _id: string; firstName: string; LastName: string }; // Optional, reference to User
+  title: string;
+  description?: string;
+  location?: string;
+  createdAt?: Date;
+  imageUrl: string;
+  startDateTime?: Date;
+  endDateTime?: Date;
+  price?: string;
+  isFree?: boolean;
+  url?: string;
+  category?: { _id: string; name: string };
+  organizer?: { _id: string; firstName: string; LastName: string };
 }
 
 const EventSchema = new Schema({
